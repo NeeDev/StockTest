@@ -15,6 +15,28 @@ namespace Stock
         public Form1()
         {
             InitializeComponent();
+            Init();
+        }
+        public void Init()
+        {
+            KH_OpenAPI.CommConnect();
+            KH_OpenAPI.OnEventConnect += E_Connect;
+
+        }
+
+        public void E_Connect(Object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
+        {
+            switch(e.nErrCode)
+            {
+                case KHErrorCode.NONE:
+                    break;
+                case KHErrorCode.USERINFO:
+                    break;
+                case KHErrorCode.SERVER:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

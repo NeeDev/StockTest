@@ -28,13 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.KH_OpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
+            ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // axKHOpenAPI1
+            // 
+            this.KH_OpenAPI.Enabled = true;
+            this.KH_OpenAPI.Location = new System.Drawing.Point(13, 13);
+            this.KH_OpenAPI.Name = "axKHOpenAPI1";
+            this.KH_OpenAPI.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axKHOpenAPI1.OcxState")));
+            this.KH_OpenAPI.Size = new System.Drawing.Size(100, 50);
+            this.KH_OpenAPI.TabIndex = 0;
+            this.KH_OpenAPI.Visible = false;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.KH_OpenAPI);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private AxKHOpenAPILib.AxKHOpenAPI KH_OpenAPI;
     }
 }
 
