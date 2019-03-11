@@ -21,7 +21,7 @@ namespace Stock
         {
             KH_OpenAPI.CommConnect();
             KH_OpenAPI.OnEventConnect += E_Connect;
-
+           
         }
 
         public void E_Connect(Object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
@@ -29,6 +29,7 @@ namespace Stock
             switch(e.nErrCode)
             {
                 case KHErrorCode.NONE:
+                    KH_OpenAPI.GetLoginInfo("USER_NAME");
                     break;
                 case KHErrorCode.USERINFO:
                     break;
