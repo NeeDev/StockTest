@@ -1,27 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Stock.Contract;
+using System;
 using System.Windows.Forms;
-
 namespace Stock
 {
-    public partial class Form1 : Form
+    public partial class MainView : Form
     {
-        public Form1()
+        public MainView()
         {
             InitializeComponent();
             Init();
         }
         public void Init()
         {
-            KH_OpenAPI.CommConnect();
-            KH_OpenAPI.OnEventConnect += E_Connect;
-           
+            //KH_OpenAPI.CommConnect();        
         }
 
         public void E_Connect(Object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
