@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Stock.Contract;
 
 namespace Stock.Contract
 {
-    interface IAccountModel
+    interface IAccountPresenter
     {
-        string getData(string data);  // 원하는 데이터 얻기.
-     
+        void getAccountInfo();
     }
 }

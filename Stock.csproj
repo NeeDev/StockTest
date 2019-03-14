@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contract\IAccountModel.cs" />
+    <Compile Include="Contract\IAccountPresenter.cs" />
     <Compile Include="Contract\IAccountView.cs" />
+    <Compile Include="Model\AccountModel.cs" />
+    <Compile Include="Presenter\AccountPresenter.cs" />
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,8 +105,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Presenter\" />
+    <Folder Include="Contract\Model\" />
+    <Folder Include="Contract\View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
