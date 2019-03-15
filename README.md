@@ -3,7 +3,9 @@
 03.14 (목)
 [남은 구현 항목]
 1. 화면 구현
-   - 사용할 UI 라이브러리 선택
+   - 사용할 Winform UI 라이브러리 선택 (=MetroUI)
+     1. MetroUI (무료) : https://untitledtblog.tistory.com/112   
+     2. BuniFu  (유료) : https://codango.com/c-vb-net-finance-manager-modern-dark-flat-ui-bunifu-ui/#.XIsqLiIzaUk
    - 폼 분할
 2. 기능 구현
    - DB 연동(빠른 검색)
