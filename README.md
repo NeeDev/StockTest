@@ -1,4 +1,8 @@
 # Stock
+03.19 (화)
+1. MSSQl DB
+   - 설치 방법 : https://excelsior-cjh.tistory.com/174
+
 03.15 (금)
 1. UI Source
   - 아이콘 이미지 : https://icons8.com/app/
