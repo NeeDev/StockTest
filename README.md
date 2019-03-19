@@ -4,7 +4,8 @@
    - 설치 방법 : https://excelsior-cjh.tistory.com/174
 2. 싱글톤 패턴 제네릭 구현
    - 소스 코드 : http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_QnA_etc&page=1&sn1=&divpage=1&sn=off&ss=on&sc=on&select_arrange=headnum&desc=asc&no=2393
-   
+3. TextBox 검색 목록 
+   - 소그 코드 : https://www.c-sharpcorner.com/UploadFile/33b051/autocomplete-textbox-in-windows-form/
 03.15 (금)
 1. UI Source
   - 아이콘 이미지 : https://icons8.com/app/
