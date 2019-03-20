@@ -1,7 +1,12 @@
 # Stock
+03.20 (수)
+1. MSSQL DB 생성
+   - 생성 방법 : https://server-talk.tistory.com/248
+
 03.19 (화)
 1. MSSQl DB
    - 설치 방법 : https://excelsior-cjh.tistory.com/174
+   
 2. 싱글톤 패턴 제네릭 구현
    - 소스 코드 : http://lab.gamecodi.com/board/zboard.php?id=GAMECODILAB_QnA_etc&page=1&sn1=&divpage=1&sn=off&ss=on&sc=on&select_arrange=headnum&desc=asc&no=2393
 3. TextBox 검색 목록 
