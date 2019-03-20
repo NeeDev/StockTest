@@ -1,14 +1,16 @@
-﻿using Stock.Contract;
+﻿using Stock.Contract.View;
+using Stock.Contract.Presenter;
 using System;
-using System.Windows.Forms;
 using System.Diagnostics;
 using Stock.Presenter;
+using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace Stock
 {
-    public partial class MainView : Form, IAccountView
+    public partial class MainView : Form, IMainView
     {
-        IAccountPresenter presenter;
+        MainPresenter presenter;
 
         public MainView()
         {
@@ -20,7 +22,9 @@ namespace Stock
         {
             KH_OpenAPI.CommConnect();
             KH_OpenAPI.OnEventConnect += E_Connect;
-            presenter = new AccountPresenter(this);
+
+            //presenter = new AccountPresenter(this);
+            presenter = new MainPresenter(this);
         }
 
         public void E_Connect(Object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)

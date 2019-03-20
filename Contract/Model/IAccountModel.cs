@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Stock.Contract;
 
-namespace Stock.Contract
+namespace Stock.Contract.Model
 {
     interface IAccountModel
     {

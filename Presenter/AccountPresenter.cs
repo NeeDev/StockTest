@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Stock.Contract;
+using Stock.Contract.Presenter;
+using Stock.Contract.View;
+using Stock.Contract.Model;
 using Stock.Model;
 
 namespace Stock.Presenter

@@ -30,42 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.KH_OpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).BeginInit();
             this.SuspendLayout();
             // 
             // KH_OpenAPI
             // 
             this.KH_OpenAPI.Enabled = true;
-            this.KH_OpenAPI.Location = new System.Drawing.Point(299, 394);
+            this.KH_OpenAPI.Location = new System.Drawing.Point(24, 404);
             this.KH_OpenAPI.Name = "KH_OpenAPI";
             this.KH_OpenAPI.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("KH_OpenAPI.OcxState")));
-            this.KH_OpenAPI.Size = new System.Drawing.Size(23, 21);
+            this.KH_OpenAPI.Size = new System.Drawing.Size(52, 23);
             this.KH_OpenAPI.TabIndex = 0;
             this.KH_OpenAPI.Visible = false;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.KH_OpenAPI);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MainView";
-            this.Text = "Form1";
+            this.Text = "Form";
             ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).EndInit();
             this.ResumeLayout(false);
 
@@ -74,7 +60,6 @@
         #endregion
 
         private AxKHOpenAPILib.AxKHOpenAPI KH_OpenAPI;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

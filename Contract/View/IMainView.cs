@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stock.Contract
+namespace Stock.Contract.View
 {
-    interface IAccountPresenter
+    interface IMainView
     {
-        void getAccountInfo();
+
     }
 }
