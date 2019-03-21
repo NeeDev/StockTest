@@ -8,5 +8,6 @@ namespace Stock.Contract.Presenter
 {
     interface IMainPresenter
     {
+        void Init();
     }
 }

@@ -14,19 +14,19 @@ namespace Stock
         SqlConnection scon;
         SqlCommand scom;
         
-        public DBHelper ()
-        {
-            scon = new SqlConnection(SCON_STRING);
-            scom = new SqlCommand();
-
-            scom.Connection = scon;
-        }  
 
         public SqlDataReader Command(string comm)
         {
+            scon = new SqlConnection(SCON_STRING);
+            scom = new SqlCommand();
+            scom.Connection = scon;
             scom.CommandText = comm;
+            using 
+            {
+                scon.open();
+
+            }
             return scom.ExecuteReader();
         }
-        
     }
 }

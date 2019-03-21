@@ -4,17 +4,15 @@ using System;
 using System.Diagnostics;
 using Stock.Presenter;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
 namespace Stock
 {
     public partial class MainView : Form, IMainView
     {
         MainPresenter presenter;
-
+        
         public MainView()
         {
-            
             InitializeComponent();
             Init();
         }
@@ -22,9 +20,10 @@ namespace Stock
         {
             KH_OpenAPI.CommConnect();
             KH_OpenAPI.OnEventConnect += E_Connect;
-
+            
             //presenter = new AccountPresenter(this);
             presenter = new MainPresenter(this);
+            
         }
 
         public void E_Connect(Object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
@@ -32,10 +31,10 @@ namespace Stock
             switch(e.nErrCode)
             {
                 case KHErrorCode.NONE:
-                    presenter.getAccountInfo();
+                    presenter.Init();
                     break;
                 case KHErrorCode.USERINFO:
-                    presenter.getAccountInfo();
+
                     break;
                 case KHErrorCode.SERVER:
                     break;
@@ -57,6 +56,13 @@ namespace Stock
         public void DisplayAccList(string name)
         {
             Debug.WriteLine(name);
+        }
+
+        public void setTextBoxAuto(AutoCompleteStringCollection  coll)
+        {
+            this.textSearchStock.AutoCompleteMode = AutoCompleteMode.Suggest;
+            this.textSearchStock.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            this.textSearchStock.AutoCompleteCustomSource = coll;
         }
     }
 }

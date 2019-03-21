@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.KH_OpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
+            this.textSearchStock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,23 +44,33 @@
             this.KH_OpenAPI.TabIndex = 0;
             this.KH_OpenAPI.Visible = false;
             // 
+            // textSearchStock
+            // 
+            this.textSearchStock.Location = new System.Drawing.Point(24, 125);
+            this.textSearchStock.Name = "textSearchStock";
+            this.textSearchStock.Size = new System.Drawing.Size(100, 21);
+            this.textSearchStock.TabIndex = 1;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.textSearchStock);
             this.Controls.Add(this.KH_OpenAPI);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MainView";
             this.Text = "Form";
             ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private AxKHOpenAPILib.AxKHOpenAPI KH_OpenAPI;
+        private System.Windows.Forms.TextBox textSearchStock;
     }
 }
 
