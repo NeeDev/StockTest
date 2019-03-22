@@ -48,7 +48,7 @@
             // 
             this.textSearchStock.Location = new System.Drawing.Point(24, 125);
             this.textSearchStock.Name = "textSearchStock";
-            this.textSearchStock.Size = new System.Drawing.Size(100, 21);
+            this.textSearchStock.Size = new System.Drawing.Size(195, 21);
             this.textSearchStock.TabIndex = 1;
             // 
             // MainView

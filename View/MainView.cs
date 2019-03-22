@@ -4,43 +4,29 @@ using System;
 using System.Diagnostics;
 using Stock.Presenter;
 using System.Windows.Forms;
+using AxKHOpenAPILib;
 
 namespace Stock
 {
     public partial class MainView : Form, IMainView
     {
+        #region # Define Property
         MainPresenter presenter;
-        
+        TextBox IMainView.t_searchStock
+        {
+            get { return this.textSearchStock; }
+        }
+
+        AxKHOpenAPI IMainView.KH_OpenAPI
+        {
+            get{ return this.KH_OpenAPI; }
+        }
+        #endregion
+
         public MainView()
         {
             InitializeComponent();
-            Init();
-        }
-        public void Init()
-        {
-            KH_OpenAPI.CommConnect();
-            KH_OpenAPI.OnEventConnect += E_Connect;
-            
-            //presenter = new AccountPresenter(this);
             presenter = new MainPresenter(this);
-            
-        }
-
-        public void E_Connect(Object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
-        {
-            switch(e.nErrCode)
-            {
-                case KHErrorCode.NONE:
-                    presenter.Init();
-                    break;
-                case KHErrorCode.USERINFO:
-
-                    break;
-                case KHErrorCode.SERVER:
-                    break;
-                default:
-                    break;
-            }
         }
 
         public void DisplayUserName(string name)
@@ -58,11 +44,6 @@ namespace Stock
             Debug.WriteLine(name);
         }
 
-        public void setTextBoxAuto(AutoCompleteStringCollection  coll)
-        {
-            this.textSearchStock.AutoCompleteMode = AutoCompleteMode.Suggest;
-            this.textSearchStock.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            this.textSearchStock.AutoCompleteCustomSource = coll;
-        }
+  
     }
 }

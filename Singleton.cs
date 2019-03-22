@@ -30,7 +30,7 @@ public class Singleton<T> where T : class
                 // ConstructorInfo는 클래스 생성자 특성을 검색하고 생성자 메타 데이터에 대한 액세스를 제공.
                 ConstructorInfo[] ctors = t.GetConstructors();
                
-                if (ctors.Length > 0)
+                if (ctors.Length > 1)
                 {
                     // 한개 이상 존재 시 exeption 발생.
                     throw new InvalidOperationException(String.Format("{0} has at least one accesible ctor making it impossible to enforce singleton behaviour", t.Name));

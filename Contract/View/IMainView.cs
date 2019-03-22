@@ -2,8 +2,9 @@
 
 namespace Stock.Contract.View
 {
-    interface IMainView
+    interface IMainView 
     {
-        void setTextBoxAuto(AutoCompleteStringCollection coll);
+        TextBox t_searchStock { get;}
+        AxKHOpenAPILib.AxKHOpenAPI KH_OpenAPI { get; }
     }
 }
