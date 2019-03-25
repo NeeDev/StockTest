@@ -24,31 +24,36 @@ namespace Stock.Presenter
 
         public void Init()
         {
-            view.KH_OpenAPI.CommConnect();
-            view.KH_OpenAPI.OnEventConnect += KH_Connect;
+            #region [Setting] view.KH_OpenAPI
 
+                view.KH_OpenAPI.CommConnect();
+                view.KH_OpenAPI.OnEventConnect += KH_Connect;
 
-            #region # TextBox Setting
-            view.t_searchStock.KeyDown += textBox_Keydown;
-            
+            #endregion
+            #region [Setting] view.tbSearchStock 
 
-            AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
-            SqlDataReader reader = DBHelper.Instance.Command("select company from KOSPI");
+                view.tbSearchStock.KeyDown += textBox_Keydown;
+                AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+                SqlDataReader reader = DBHelper.Instance.Command("select company from KOSPI");
 
-            while (reader.Read())
-            {
-                // trim이 없으면 공백이 생김..............
-                string company = reader["company"].ToString().Trim();
-                coll.Add(company);
-            }
+                while (reader.Read())
+                {
+                    // trim이 없으면 공백이 생김..............
+                    string company = reader["company"].ToString().Trim();
+                    coll.Add(company);
+                }
 
-            view.t_searchStock.AutoCompleteMode = AutoCompleteMode.Suggest;
-            view.t_searchStock.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            view.t_searchStock.AutoCompleteCustomSource = coll;
+                view.tbSearchStock.AutoCompleteMode = AutoCompleteMode.Suggest;
+                view.tbSearchStock.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                view.tbSearchStock.AutoCompleteCustomSource = coll;
+
             #endregion
 
         }
 
+        #region [Method] Event Define
+
+        // view.KH_OpenAPI.OnEventConnect
         private void KH_Connect(Object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
         {
             switch (e.nErrCode)
@@ -64,6 +69,7 @@ namespace Stock.Presenter
             }
         }
 
+        // view.tbSearchStock.keydown
         private void textBox_Keydown(Object obj, KeyEventArgs e)
         {
             TextBox tb = (TextBox)obj;
@@ -71,5 +77,6 @@ namespace Stock.Presenter
             if (e.KeyCode == Keys.Enter)
                 MessageBox.Show(tb.Text);
         }
+        #endregion
     }
 }

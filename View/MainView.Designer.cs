@@ -30,38 +30,67 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.KH_OpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
-            this.textSearchStock = new System.Windows.Forms.TextBox();
+            this.tbSearchStock = new System.Windows.Forms.TextBox();
+            this.panelAccount = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).BeginInit();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // KH_OpenAPI
             // 
             this.KH_OpenAPI.Enabled = true;
-            this.KH_OpenAPI.Location = new System.Drawing.Point(24, 404);
+            this.KH_OpenAPI.Location = new System.Drawing.Point(11, 253);
             this.KH_OpenAPI.Name = "KH_OpenAPI";
             this.KH_OpenAPI.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("KH_OpenAPI.OcxState")));
             this.KH_OpenAPI.Size = new System.Drawing.Size(52, 23);
             this.KH_OpenAPI.TabIndex = 0;
             this.KH_OpenAPI.Visible = false;
             // 
-            // textSearchStock
+            // tbSearchStock
             // 
-            this.textSearchStock.Location = new System.Drawing.Point(24, 125);
-            this.textSearchStock.Name = "textSearchStock";
-            this.textSearchStock.Size = new System.Drawing.Size(195, 21);
-            this.textSearchStock.TabIndex = 1;
+            this.tbSearchStock.Location = new System.Drawing.Point(12, 118);
+            this.tbSearchStock.Name = "tbSearchStock";
+            this.tbSearchStock.Size = new System.Drawing.Size(200, 21);
+            this.tbSearchStock.TabIndex = 1;
+            // 
+            // panelAccount
+            // 
+            this.panelAccount.Location = new System.Drawing.Point(12, 12);
+            this.panelAccount.Name = "panelAccount";
+            this.panelAccount.Size = new System.Drawing.Size(200, 100);
+            this.panelAccount.TabIndex = 2;
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.Controls.Add(this.KH_OpenAPI);
+            this.panelMenu.Location = new System.Drawing.Point(12, 145);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(200, 524);
+            this.panelMenu.TabIndex = 3;
+            // 
+            // panel
+            // 
+            this.panel.Location = new System.Drawing.Point(218, 13);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1034, 656);
+            this.panel.TabIndex = 4;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.textSearchStock);
-            this.Controls.Add(this.KH_OpenAPI);
+            this.Controls.Add(this.panel);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelAccount);
+            this.Controls.Add(this.tbSearchStock);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MainView";
             this.Text = "Form";
             ((System.ComponentModel.ISupportInitialize)(this.KH_OpenAPI)).EndInit();
+            this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,7 +99,10 @@
         #endregion
 
         private AxKHOpenAPILib.AxKHOpenAPI KH_OpenAPI;
-        private System.Windows.Forms.TextBox textSearchStock;
+        private System.Windows.Forms.TextBox tbSearchStock;
+        private System.Windows.Forms.Panel panelAccount;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panel;
     }
 }
 

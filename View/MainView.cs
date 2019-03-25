@@ -12,9 +12,9 @@ namespace Stock
     {
         #region # Define Property
         MainPresenter presenter;
-        TextBox IMainView.t_searchStock
+        TextBox IMainView.tbSearchStock
         {
-            get { return this.textSearchStock; }
+            get { return this.tbSearchStock; }
         }
 
         AxKHOpenAPI IMainView.KH_OpenAPI
@@ -29,21 +29,5 @@ namespace Stock
             presenter = new MainPresenter(this);
         }
 
-        public void DisplayUserName(string name)
-        {
-            Debug.WriteLine(name);
-        }
-
-        public void DisplayUserID(string name)
-        {
-            Debug.WriteLine(name);
-        }
-
-        public void DisplayAccList(string name)
-        {
-            Debug.WriteLine(name);
-        }
-
-  
     }
 }
