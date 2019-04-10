@@ -24,13 +24,13 @@ namespace Stock.Presenter
 
         public void Init()
         {
-            #region [Setting] view.KH_OpenAPI
+            #region [Set] view.KH_OpenAPI
 
-                view.KH_OpenAPI.CommConnect();
-                view.KH_OpenAPI.OnEventConnect += KH_Connect;
+               // view.KH_OpenAPI.CommConnect();
+               // view.KH_OpenAPI.OnEventConnect += KH_Connect;
 
             #endregion
-            #region [Setting] view.tbSearchStock 
+            #region [Set] view.tbSearchStock 
 
                 view.tbSearchStock.KeyDown += textBox_Keydown;
                 AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
@@ -48,7 +48,9 @@ namespace Stock.Presenter
                 view.tbSearchStock.AutoCompleteCustomSource = coll;
 
             #endregion
-
+            #region [Set]View.btClose
+            view.btClose.Click += btClose_onclick;
+            #endregion
         }
 
         #region [Method] Event Define
@@ -76,6 +78,11 @@ namespace Stock.Presenter
             
             if (e.KeyCode == Keys.Enter)
                 MessageBox.Show(tb.Text);
+        }
+
+        private void btClose_onclick(object obj, EventArgs e)
+        {
+            view.Close();
         }
         #endregion
     }

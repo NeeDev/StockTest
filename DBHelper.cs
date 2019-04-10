@@ -17,11 +17,14 @@ namespace Stock
 
         DBHelper()
         {
+            /*DB를 연결할 수 있는지 확인할 수 있어야함! */
             scon = new SqlConnection(SCON_STRING);
             scom = new SqlCommand();
             scom.Connection = scon;
             scon.Open();
+            
         }
+        
         public SqlDataReader Command(string commText)
         {
             scom.CommandText = commText;
