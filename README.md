@@ -1,4 +1,7 @@
 # Stock
+04.22(월)
+WPF Resource Dictionary : https://medium.com/@Rando209/wpf-resources-b77ae1aecdea
+
 04.02(화)
  
 [1] Void OnReceiveTrData Tran 수신시 이벤트
